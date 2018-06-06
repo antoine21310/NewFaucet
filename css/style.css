@@ -1,9 +1,23 @@
-.col-md-8{
+body{
+	background-color: lightgrey;
+}
+.col-md-10{
 	background-color: blue;
 }
 .col-md-2{
 	background-color: red;
 }
+
+.col-md{
+	margin: 10px;
+
+	background-color: green;
+
+}
 .page-footer{
 	background-color: yellow;
+}
+.footer-copyright{
+	padding: 20px;
+	background-color: lightblue;
 }
