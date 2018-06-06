@@ -7,10 +7,13 @@
       <meta name="viewport" content="width=device-width" />
       <meta charset="utf-8">
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/animate.min.css">
       <link rel="stylesheet" type="text/css" href="css/style.css">
+
       <script type="text/javascript" src="js/jquery.js"></script>
       <script type="text/javascript" src="js/popper.js"></script>
       <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/particles.js"></script>
    </head>
    <body>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -19,7 +22,7 @@
          <span class="navbar-toggler-icon"></span>
          </button>
          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav animated fadeInRight">
                <li class="nav-item active">
                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                </li>
@@ -108,19 +111,19 @@
       </div>
       <div class="container-fluid">
          <div class="row">
-            <div class="col-md border rounded shadow">
+            <div class="col-md border rounded shadow animated jackInTheBox">
                Bitcoin</br>100€
             </div>
-            <div class="col-md border rounded shadow">
+            <div class="col-md border rounded shadow animated jackInTheBox">
                Dogecoin</br>100€
             </div>
-            <div class="col-md border rounded shadow">
+            <div class="col-md border rounded shadow animated jackInTheBox">
                Litecoin</br>100€
             </div>
-            <div class="col-md border rounded shadow">
+            <div class="col-md border rounded shadow animated jackInTheBox">
                Dashcoin</br>100€
             </div>
-            <div class="col-md border rounded shadow">
+            <div class="col-md border rounded shadow animated jackInTheBox">
                Bitcoin Cash</br>100€
             </div>
          </div>
