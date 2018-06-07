@@ -1,18 +1,21 @@
 body{
 	background-color: lightgrey;
 }
+
 .col-md-10{
-	background-color: blue;
-}
-.col-md-2{
-	background-color: red;
 }
 
-.col-md{
+.col-md-2{
+
+}
+
+.card{
 	margin-top: 20px;
 	margin-bottom: 20px;
-	text-align: center;
 
+}
+.card-header{
+	text-align: center;
 }
 .page-footer{
 	background-color: yellow;
