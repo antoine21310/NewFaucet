@@ -39,7 +39,7 @@
                <a class="nav-link " href="#">Dashcoin</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" data-toggle="modal" data-target="#exampleModal" href="#">Login/Register</a>
+               <a class="nav-link" data-toggle="modal" data-target="#login" href="#">Login / Register</a>
             </li>
          </ul>
       </div>
@@ -47,22 +47,30 @@
 
 
 
-   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-     <div class="modal-content">
-      <div class="modal-header">
-       <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-     </button>
+   <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog modal-dialog-centered" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="exampleModalLabel">Login / Register</h5>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+          </button>
+       </div>
+       <div class="modal-body">
+         <form>
+          <div class="form-group">
+           <label for="exampleInputEmail1">Email address</label>
+           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+           <label for="exampleInputPassword1">Password</label>
+           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Login / Register</button>
+     </form>
   </div>
-  <div class="modal-body">
-    ...
- </div>
- <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-    <button type="button" class="btn btn-primary">Save changes</button>
- </div>
 </div>
 </div>
 </div>
@@ -72,7 +80,7 @@
 <div class="container-fluid">
    <div class="row">
 
-      <div class="col-md-10 col-md-push-2">
+      <div class="col-md-9 col-md-push-3">
          <div class="card shadow">
             <div class="card-header">Claim</div>
             <div class="card-body">
@@ -124,7 +132,7 @@
          </div>
       </div>
 
-      <div class="col-md-2 col-md-pull-10">
+      <div class="col-md-3 col-md-pull-9">
          <div class="card shadow">
             <div class="card-header">News</div>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
