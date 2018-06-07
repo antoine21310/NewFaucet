@@ -9,9 +9,9 @@ body{
 }
 
 .col-md{
-	margin: 10px;
-
-	background-color: green;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
 
 }
 .page-footer{
