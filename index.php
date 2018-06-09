@@ -7,7 +7,7 @@
 	<?php echo $includes; ?>
 </head>
 <body>
-	<?php echo $navbar; ?>
+	<?php echo $navbarHome; ?>
 
 	<div class="container-fluid">
 		<div class="row">

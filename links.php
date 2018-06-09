@@ -1,4 +1,5 @@
-<?php require ("tpl.php"); ?>
+<?php require ("tpl.php");
+ ?>
 
 <!DOCTYPE html>
 <html>
@@ -7,13 +8,13 @@
    <?php echo $includes; ?>
 </head>
 <body>
-   <?php echo $navbar; ?>
+   <?php echo $navbarLinks; ?>
 
    <div class="container-fluid">
       <div class="row">
          <div class="col-md-8">
             <?php echo $adTop; ?>
-            <?php echo $news; ?>
+            <?php echo $links; ?>
             <?php echo $whIsBitcoin; ?>
             <?php echo $adBot; ?>
          </div>

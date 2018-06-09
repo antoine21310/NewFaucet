@@ -1,6 +1,7 @@
 body{
 	background-color:  #1f618d ;
 	font-size: 19px;
+	overflow-x: hidden;
 }
 pre{
 	margin: 0;
@@ -17,6 +18,9 @@ pre{
 .card{
 	margin-bottom: 20px;
 	border:none;
+}
+.ad{
+	background-color: lightgrey;
 }
 .margin-bottom-20{
 	margin-bottom: 20px;

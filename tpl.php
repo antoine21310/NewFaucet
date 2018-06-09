@@ -1,4 +1,8 @@
 <?php
+include("php/price.php");
+include("php/SQL.php");
+include("php/getIP.php");
+
 $includes = '
 
 <meta name="viewport" content="width=device-width, user-scalable=no">
@@ -7,25 +11,27 @@ $includes = '
 <link rel="stylesheet" type="text/css" href="css/animate.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/popper.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/particles.js"></script>
 <script type="text/javascript" src="js/popover.js"></script>
+<script type="text/javascript" src="js/submitLinks.js"></script>
 
 ';
 
 $titleHome = 'Cryptomine';
 $titleHome = 'Cryptomine - Links exchange';
 
-$navbar = '
-
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark animated fadeIn shadow">
+$navbarHome = '
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark animated shadow">
 <a class="navbar-brand" href="#">Cryptomine</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
-<div class="collapse navbar-collapse animated slideInRight" id="navbarText">
+<div class="collapse navbar-collapse animated fadeIn" id="navbarText">
 <ul class="navbar-nav mr-auto">
 <li class="nav-item active">
 <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
@@ -45,29 +51,58 @@ $navbar = '
 </span>
 </div>
 </nav>
+';
 
+$navbarLinks = '
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark animated  shadow">
+<a class="navbar-brand" href="#">Cryptomine</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse animated fadeIn" id="navbarText">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">Claim</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#">List</a>
+</li>
+<li class="nav-item active">
+<a class="nav-link" href="links.php">Links exchange</a>
+</li>
+</ul>
+<span class="navbar-text">
+<i class="fas fa-user margin-right-10"></i><a class="" href="account.php">My Account</a>
+</span>
+</div>
+</nav>
 ';
 
 $adTop = '
 <center>
-<pre class="rounded margin-top-20 margin-bottom-20" ><div class="rounded animated slideInLeft" style="height: 90px; width: 728px; background-color: lightgrey;"></div></pre class="rounded">
+<pre class="rounded margin-top-20 margin-bottom-20 animated swing" ><div class="rounded animated " style="height: 90px; width: 728px; background-color: lightgrey;"></div></pre class="rounded">
 </center>
 ';
 
 $adBot = '
 <center>
-<pre class="rounded margin-bottom-20" ><div class="rounded animated slideInLeft" style="height: 90px; width: 728px; background-color: lightgrey;"></div></pre class="rounded">
+<pre class="rounded margin-bottom-20 animated swing" >
+<iframe class="rounded align-middle ad" data-aa="933427" src="//ad.a-ads.com/933427?size=728x90" scrolling="no" style="width:728px; height:90px; border:0px; padding:0;overflow:hidden" allowtransparency="true"></iframe>
+</pre class="rounded">
 </center>
 ';
 
 $adRight = '
 <center>
-<pre class="rounded margin-bottom-20" ><div class="rounded animated slideInRight" style="height: 100px; width: 300px; background-color: lightgrey;"></div></pre class="rounded">
+<pre class="rounded margin-bottom-20 animated swing" ><div class="rounded animated " style="height: 100px; width: 300px; background-color: lightgrey;"></div></pre class="rounded">
 </center>
 ';
 
 $news = '
-<div class="card shadow animated slideInLeft">
+<div class="card shadow animated ">
 <div class="card-header">News</div>
 <div class="card-body">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -90,7 +125,7 @@ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 ';
 
 $whIsBitcoin = '
-<div class="card shadow animated slideInLeft">
+<div class="card shadow animated ">
 <div class="card-header">What is Bitcoin</div>
 <div class="card-body">
 Bitcoin is a worldwide cryptocurrency and digital payment system called the first decentralized digital currency, since the system works without a central repository or single administrator.
@@ -102,8 +137,19 @@ As of February 2015, over 100,000 merchants and vendors accepted bitcoin as paym
 </div>
 ';
 
+$links = '
+<div class="card shadow animated ">
+<div class="card-header">Links exchange</div>
+<div class="card-body">
+
+
+
+</div>
+</div>
+';
+
 $lastClaims = '
-<div class="card margin-top-20 shadow animated slideInRight">
+<div class="card margin-top-20 shadow animated ">
 <div class="card-header">Last claims</div>
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -115,7 +161,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ';
 
 $lastWithdrawals = '
-<div class="card shadow animated slideInRight">
+<div class="card shadow animated ">
 <div class="card-header">Last withdrawals</div>
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -128,33 +174,33 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 $price = '
 <div class="col-md">
-<div class="card shadow animated swing">
+<div class="card shadow animated pulse">
 <div class="card-header">Bitcoin</div>
-<div class="card-body text-center">100€</div>
+<div class="card-body text-center">'.$priceBTC.'$</div>
 </div>
 </div>
 <div class="col-md">
-<div class="card shadow animated swing">
+<div class="card shadow animated pulse">
 <div class="card-header">Dogecoin</div>
-<div class="card-body text-center">100€</div>
+<div class="card-body text-center">'.$priceDOGE.'$</div>
 </div>
 </div>
 <div class="col-md">
-<div class="card shadow animated swing">
+<div class="card shadow animated pulse">
 <div class="card-header">Litecoin</div>
-<div class="card-body text-center">100€</div>
+<div class="card-body text-center">'.$priceLTC.'$</div>
 </div>
 </div>
 <div class="col-md">
-<div class="card shadow animated swing">
+<div class="card shadow animated pulse">
 <div class="card-header">Dashcoin</div>
-<div class="card-body text-center">100€</div>
+<div class="card-body text-center">'.$priceDASH.'$</div>
 </div>
 </div>
 <div class="col-md">
-<div class="card shadow animated swing">
+<div class="card shadow animated pulse">
 <div class="card-header">Bitcoin Cash</div>
-<div class="card-body text-center">100€</div>
+<div class="card-body text-center">'.$priceBCH.'$</div>
 </div>
 </div>
 ';
