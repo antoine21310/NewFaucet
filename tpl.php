@@ -16,6 +16,7 @@ $includes = '
 ';
 
 $titleHome = 'Cryptomine';
+$titleHome = 'Cryptomine - Links exchange';
 
 $navbar = '
 
@@ -27,7 +28,7 @@ $navbar = '
 <div class="collapse navbar-collapse animated slideInRight" id="navbarText">
 <ul class="navbar-nav mr-auto">
 <li class="nav-item active">
-<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+<a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
 </li>
 <li class="nav-item">
 <a class="nav-link" href="#">Claim</a>
@@ -36,7 +37,7 @@ $navbar = '
 <a class="nav-link" href="#">List</a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="#">Links exchange</a>
+<a class="nav-link" href="links.php">Links exchange</a>
 </li>
 </ul>
 <span class="navbar-text">
@@ -49,19 +50,19 @@ $navbar = '
 
 $adTop = '
 <center>
-<pre ><div class="margin-top-20 margin-bottom-20 rounded shadow animated slideInLeft" style="height: 90px; width: 728px; background-color: lightgrey;"></div></pre>
+<pre class="rounded margin-top-20 margin-bottom-20" ><div class="rounded animated slideInLeft" style="height: 90px; width: 728px; background-color: lightgrey;"></div></pre class="rounded">
 </center>
 ';
 
 $adBot = '
 <center>
-<pre ><div class="margin-bottom-20 rounded shadow animated slideInLeft" style="height: 90px; width: 728px; background-color: lightgrey;"></div></pre>
+<pre class="rounded margin-bottom-20" ><div class="rounded animated slideInLeft" style="height: 90px; width: 728px; background-color: lightgrey;"></div></pre class="rounded">
 </center>
 ';
 
 $adRight = '
 <center>
-<pre ><div class="margin-top-20 margin-bottom-20 rounded shadow animated slideInRight" style="height: 100px; width: 300px; background-color: lightgrey;"></div></pre>
+<pre class="rounded margin-bottom-20" ><div class="rounded animated slideInRight" style="height: 100px; width: 300px; background-color: lightgrey;"></div></pre class="rounded">
 </center>
 ';
 
@@ -72,13 +73,13 @@ $news = '
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+consequat. Duis aute irure dolor in repre class="rounded"henderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+consequat. Duis aute irure dolor in repre class="rounded"henderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -107,7 +108,7 @@ $lastClaims = '
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+consequat. Duis aute irure dolor in repre class="rounded"henderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </div>
@@ -119,7 +120,7 @@ $lastWithdrawals = '
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+consequat. Duis aute irure dolor in repre class="rounded"henderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </div>
