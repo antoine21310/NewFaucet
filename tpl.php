@@ -1,9 +1,9 @@
 <?php
-include("php/price.php");
+//include("php/price.php");
 include("php/SQL.php");
 include("php/getIP.php");
 
-$includes = '
+$css = '
 
 <meta name="viewport" content="width=device-width, user-scalable=no">
 <meta charset="utf-8">
@@ -11,15 +11,15 @@ $includes = '
 <link rel="stylesheet" type="text/css" href="css/animate.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+';
 
-
+$js = '
 <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/popper.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/particles.js"></script>
 <script type="text/javascript" src="js/popover.js"></script>
-<script type="text/javascript" src="js/submitLinks.js"></script>
 
+<script type="text/javascript" src="js/submitLinks.js"></script>
 ';
 
 $titleHome = 'Cryptomine';
@@ -48,6 +48,7 @@ $navbarHome = '
 </ul>
 <span class="navbar-text">
 <i class="fas fa-user margin-right-10"></i><a class="" href="account.php">My Account</a>
+<a class="" data-toggle="modal" data-target="#Modal" href="#">Login / Register</a>
 </span>
 </div>
 </nav>
@@ -81,9 +82,69 @@ $navbarLinks = '
 </nav>
 ';
 
+$modal = '
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h2 class="modal-title" id="exampleModalLabel">Login</h2>
+<button  type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span style="color:black;" aria-hidden="true">&times;</span></button>
+
+
+</div>
+<div class="modal-body">
+<div id="return"></div>
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Login</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Register</a>
+</li>
+</ul>
+<div class="tab-content" id="myTabContent">
+<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+<label>Username :</label>
+<input type="text" class="form-control" id="username" >
+
+<label>Password :</label>
+<input type="text" class="form-control" id="password" >
+
+<br>
+<button id="loginn" class="btn btn-primary">Send</button>
+
+
+</div>
+<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+<label>Email :</label>
+<input type="text" class="form-control" id="emailR" autofocus>
+
+<label>Username :</label>
+<input type="text" class="form-control" id="usernameR" >
+
+<label>Password :</label>
+<input type="text" class="form-control" id="passwordR" >
+
+<br>
+<button id="login" class="btn btn-primary">Send</button>
+<script type="text/javascript" src="js/login.js"></script>
+</div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+</div>
+';
+
 $adTop = '
 <center>
-<pre class="rounded margin-top-20 margin-bottom-20 animated swing" ><div class="rounded animated " style="height: 90px; width: 728px; background-color: lightgrey;"></div></pre class="rounded">
+<pre class="rounded margin-top-20 margin-bottom-20 animated swing" ><div class="rounded animated " style="height: 90px; width: 728px; background-color: lightgrey;"></div></pre>
 </center>
 ';
 
@@ -91,13 +152,13 @@ $adBot = '
 <center>
 <pre class="rounded margin-bottom-20 animated swing" >
 <iframe class="rounded align-middle ad" data-aa="933427" src="//ad.a-ads.com/933427?size=728x90" scrolling="no" style="width:728px; height:90px; border:0px; padding:0;overflow:hidden" allowtransparency="true"></iframe>
-</pre class="rounded">
+</pre>
 </center>
 ';
 
 $adRight = '
 <center>
-<pre class="rounded margin-bottom-20 animated swing" ><div class="rounded animated " style="height: 100px; width: 300px; background-color: lightgrey;"></div></pre class="rounded">
+<pre class="rounded margin-bottom-20 animated swing" ><div class="rounded animated " style="height: 100px; width: 300px; background-color: lightgrey;"></div></pre>
 </center>
 ';
 
@@ -172,7 +233,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </div>
 ';
 
-$price = '
+/*$price = '
 <div class="col-md">
 <div class="card shadow animated pulse">
 <div class="card-header">Bitcoin</div>
@@ -203,7 +264,7 @@ $price = '
 <div class="card-body text-center">'.$priceBCH.'$</div>
 </div>
 </div>
-';
+';*/
 
 $footer = '
 <footer class="container-fluid page-footer shadow">

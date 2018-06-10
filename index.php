@@ -4,7 +4,8 @@
 <html>
 <head>
 	<title><?php echo $titleHome; ?></title>
-	<?php echo $includes; ?>
+	<?php echo $css; ?>
+	<?php echo $js; ?>
 </head>
 <body>
 	<?php echo $navbarHome; ?>
@@ -16,6 +17,7 @@
 				<?php echo $news; ?>
 				<?php echo $whIsBitcoin; ?>
 				<?php echo $adBot; ?>
+				<?php echo $modal; ?>
 			</div>
 			<div class="col-md-4">
 
@@ -28,10 +30,11 @@
 
 	<div class="container-fluid">
 		<div class="row">
-			<?php echo $price; ?>
+			<?php //echo $price; ?>
 		</div>
 	</div>
-<?php echo $footer; ?>
+	<?php echo $footer; ?>
 
 </body>
+
 </html>
