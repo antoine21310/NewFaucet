@@ -108,13 +108,13 @@ $modal = '
 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
 <label>Username :</label>
-<input type="text" class="form-control" id="username" >
+<input type="text" class="form-control" id="usernameL" >
 
 <label>Password :</label>
-<input type="text" class="form-control" id="password" >
+<input type="text" class="form-control" id="passwordL" >
 
 <br>
-<button id="loginn" class="btn btn-primary">Send</button>
+<button id="login" class="btn btn-primary">Send</button>
 
 
 </div>
@@ -129,7 +129,7 @@ $modal = '
 <input type="text" class="form-control" id="passwordR" >
 
 <br>
-<button id="login" class="btn btn-primary">Send</button>
+<button id="register" class="btn btn-primary">Send</button>
 <script type="text/javascript" src="js/login.js"></script>
 </div>
 </div>
@@ -163,7 +163,7 @@ $adRight = '
 ';
 
 $news = '
-<div class="card shadow animated ">
+<div class="card shadow animated fadeIn ">
 <div class="card-header">News</div>
 <div class="card-body">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -186,7 +186,7 @@ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 ';
 
 $whIsBitcoin = '
-<div class="card shadow animated ">
+<div class="card shadow animated fadeIn">
 <div class="card-header">What is Bitcoin</div>
 <div class="card-body">
 Bitcoin is a worldwide cryptocurrency and digital payment system called the first decentralized digital currency, since the system works without a central repository or single administrator.
@@ -199,7 +199,7 @@ As of February 2015, over 100,000 merchants and vendors accepted bitcoin as paym
 ';
 
 $links = '
-<div class="card shadow animated ">
+<div class="card shadow animated fadeIn ">
 <div class="card-header">Links exchange</div>
 <div class="card-body">
 

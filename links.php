@@ -1,11 +1,12 @@
 <?php require ("tpl.php");
- ?>
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
    <title><?php echo $titleHome; ?></title>
-   <?php echo $includes; ?>
+   <?php echo $css; ?>
+   <?php echo $js; ?>
 </head>
 <body>
    <?php echo $navbarLinks; ?>
@@ -32,7 +33,7 @@
          <?php echo $price; ?>
       </div>
    </div>
-<?php echo $footer; ?>
+   <?php echo $footer; ?>
 
 </body>
 </html>

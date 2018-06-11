@@ -1,29 +1,40 @@
 <?php 
 $email = $_POST['email'];
-$password = $_POST['password'];
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 $username = $_POST['username'];
+$date = date("Y-m-d H:i:s", strtotime('+2 hours'));
 
 $msgSuccess = '<div class="alert alert-success">Successfully registered !</div>';
-$msgAlready = '<div class="alert alert-warning">Username already used !</div>';
+$msgAlreadyUsername = '<div class="alert alert-warning">Username already used !</div>';
+$msgAlreadyEmail = '<div class="alert alert-warning">Your e-mail is already used ! Try to login</div>';
 $msgBlank = '<div class="alert alert-warning">All fields are required !</div>';
 $msgInvalid = '<div class="alert alert-warning">Your e-mail looks invalid !</div>';
 
-$registerSQL = "INSERT INTO faucet_users (Email,username, Password) VALUES ('{$email}','{$username}', '{$password}')";
+$registerSQL = "INSERT INTO faucet_users (Email,username, Password, Joined) VALUES ('{$email}','{$username}', '{$password}', '{$date}')";
+
 $alreadyUsernameSQL = "SELECT COUNT(Username) as countUsername from faucet_users where Username='{$username}'";
+$alreadyEmailSQL = "SELECT COUNT(Email) as countEmail from faucet_users where Email='{$email}'";
 
 $dbSubmit = mysqli_connect('localhost', 'root', '', 'faucet');
 
 
 $alreadyUsername = $dbSubmit->query($alreadyUsernameSQL);
+$alreadyEmail = $dbSubmit->query($alreadyEmailSQL);
 
 $countUsername = mysqli_fetch_assoc($alreadyUsername);
+$countEmail = mysqli_fetch_assoc($alreadyEmail);
 
 
 
 if($countUsername['countUsername'] != '0'):
 	$return = array(
 		'success' => '0',
-		'message' => $msgAlready);
+		'message' => $msgAlreadyUsername);
+	echo json_encode($return);
+elseif($countEmail['countEmail'] != '0'):
+	$return = array(
+		'success' => '0',
+		'message' => $msgAlreadyEmail);
 	echo json_encode($return);
 elseif($email == '' || $password == '' || $username == ''):
 	$return = array(
