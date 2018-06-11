@@ -18,6 +18,7 @@
 				<?php echo $whIsBitcoin; ?>
 				<?php echo $adBot; ?>
 				<?php echo $modal; ?>
+				<?php echo $_COOKIE['username']; ?>
 			</div>
 			<div class="col-md-4">
 

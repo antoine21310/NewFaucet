@@ -1,7 +1,10 @@
 <?php 
-$email = $_POST['email'];
-$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-$username = $_POST['username'];
+$email = htmlspecialchars($_POST['email']);
+
+$password = password_hash(htmlspecialchars($_POST['password']), PASSWORD_DEFAULT);
+
+$username = htmlspecialchars($_POST['username']);
+
 $date = date("Y-m-d H:i:s", strtotime('+2 hours'));
 
 $msgSuccess = '<div class="alert alert-success">Successfully registered !</div>';
