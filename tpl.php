@@ -49,6 +49,7 @@ $navbarHome = '
 <span class="navbar-text">
 <i class="fas fa-user margin-right-10"></i><a class="" href="account.php">My Account</a>
 <a class="" data-toggle="modal" data-target="#Modal" href="#">Login / Register</a>
+<a id="logout" href="#">Logout</a>
 </span>
 </div>
 </nav>

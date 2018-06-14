@@ -1,4 +1,6 @@
-<?php require ("tpl.php"); ?>
+<?php require ("tpl.php"); 
+include ("php/checkCookie.php");
+?>
 
 <!DOCTYPE html>
 <html>
@@ -18,7 +20,6 @@
 				<?php echo $whIsBitcoin; ?>
 				<?php echo $adBot; ?>
 				<?php echo $modal; ?>
-				<?php echo $_COOKIE['username']; ?>
 			</div>
 			<div class="col-md-4">
 

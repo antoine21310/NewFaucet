@@ -11,13 +11,18 @@ $dbSubmit = mysqli_connect('localhost', 'root', '', 'faucet');
 $passwd = $dbSubmit->query($checkPasswdSQL);
 
 $passwordDB = mysqli_fetch_assoc($passwd);
+$username = base64_encode($username);
+
+
+$cookie = $passwordDB['Password'] . ':' . $username;
 
 if(password_verify($password, $passwordDB['Password'])){
-	setcookie('username', $username, time() + 365*24*3600, '/', null, false, true);
+	setcookie('cookie', $cookie, time() + 365*24*3600, '/', null, false, true);
 	$return = array(
-		'success' => '0',
-		'message' => 'ok');
+		'success' => '1',
+		'message' => $cookie);
 	echo json_encode($return);
+	//header("location: ".$_SERVER["PHP_SELF"]);
 
 }
 else{
@@ -26,3 +31,5 @@ else{
 		'message' => 'no');
 	echo json_encode($return);
 }
+
+?>

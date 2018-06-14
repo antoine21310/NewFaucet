@@ -45,8 +45,33 @@ $("#login").click(function(){
 			document.getElementById("return").innerHTML = return_sub.message;
 			if(return_sub.success == 1){
 
-				document.getElementById("emailL").value = "";
+				document.getElementById("usernameL").value = "";
 				document.getElementById("passwordL").value = "";
+				window.location.reload()
+
+			}
+
+
+
+		}
+
+	});
+});
+
+$("#logout").click(function(){
+	$.ajax({
+
+		url : "php/logout.php" ,
+		type : "POST",
+
+		success: function(data){
+			console.log(data);
+			var return_sub=JSON.parse(data);
+
+			document.getElementById("return").innerHTML = return_sub.message;
+			if(return_sub.success == 1){
+
+				window.location.reload()
 
 			}
 
